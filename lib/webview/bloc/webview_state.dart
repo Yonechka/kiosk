@@ -44,8 +44,12 @@ class PrintingInProgress extends WebviewState {
 }
 
 class PrintSuccess extends WebviewState {
+  final String url;
+
+  const PrintSuccess(this.url);
+
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [url];
 }
 
 class PrintFailure extends WebviewState {

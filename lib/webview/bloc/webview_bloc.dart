@@ -17,6 +17,7 @@ class WebviewBloc extends Bloc<WebviewEvent, WebviewState> {
   late final WebViewController controller;
   List<dynamic>? lastReceivedData = [];
   List<Printer> printers = [];
+  final Uri baseUrl = Uri.parse("https://example.com");
 
   WebviewBloc() : super(WebviewInitial()) {
     on<WebviewEvent>((event, emit) {
@@ -65,10 +66,7 @@ class WebviewBloc extends Bloc<WebviewEvent, WebviewState> {
       try {
         log("Received data from JavaScript: ${event.data}");
 
-        // Panggil fungsi cetak dengan data yang diterima
-        await ThermalPrint.scanAndPrint(
-          event.data,
-        ); // Mengirimkan data value ke scanAndPrint
+        await ThermalPrint.scanAndPrint(event.data);
 
         log("Printing process triggered successfully.");
       } catch (e) {
@@ -100,13 +98,13 @@ class WebviewBloc extends Bloc<WebviewEvent, WebviewState> {
                 // Menerima pesan dari JavaScript (format JSON)
                 log("Received data from JavaScript: ${message.message}");
 
-                // Langkah 1: Parse JSON menjadi objek Dart
+                // Parse JSON menjadi objek Dart
                 var decodedData = jsonDecode(message.message);
 
-                // Langkah 2: Ambil array "data" dari JSON
+                // Ambil array "data" dari JSON
                 List data = decodedData['data'];
 
-                // Langkah 3: Ambil semua nilai "value" dari setiap objek dalam array "data"
+                // Ambil semua nilai "value" dari setiap objek dalam array "data"
                 List<String> values = [];
                 for (var item in data) {
                   // Cek jika item memiliki key 'value'
@@ -124,7 +122,7 @@ class WebviewBloc extends Bloc<WebviewEvent, WebviewState> {
 
                 log("Values extracted: $values");
 
-                // Langkah 4: Masukkan values ke dalam Penumpang
+                // Masukkan values ke dalam Penumpang
                 if (values.length >= 3) {
                   String companyName =
                       values[0]; // Ambil nilai pertama untuk companyName
