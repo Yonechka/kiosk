@@ -101,7 +101,7 @@ class WebviewPage extends StatelessWidget {
               child: InkWell(
                 onDoubleTap: () {
                   log("Thermal Print Screen");
-                  dialogWidget(context, AppStrings.devUrl);
+                  dialogWidget(context, AppStrings.initialUrl);
                 },
                 child: CircleAvatar(radius: 5, backgroundColor: Colors.green),
               ),

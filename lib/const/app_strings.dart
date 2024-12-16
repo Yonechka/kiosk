@@ -1,5 +1,7 @@
 class AppStrings {
   // Link KiosK Asmat
+
+  // Url yang di pakai sekarang
   static const String initialUrl = 'https://stg.kiosk.asmat.app/preview/BBB';
   static const String testUrl = 'https://yonechka.github.io';
   static const String devUrl =

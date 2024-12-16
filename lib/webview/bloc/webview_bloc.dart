@@ -79,17 +79,17 @@ class WebviewBloc extends Bloc<WebviewEvent, WebviewState> {
           ..setNavigationDelegate(
             NavigationDelegate(
               onPageStarted: (url) {
-                add(PageStarted(AppStrings.devUrl));
+                add(PageStarted(AppStrings.initialUrl));
               },
               onProgress: (progress) {
                 add(PageProgress(progress));
               },
               onPageFinished: (url) {
-                add(PageFinished(AppStrings.devUrl));
+                add(PageFinished(AppStrings.initialUrl));
               },
             ),
           )
-          ..loadRequest(Uri.parse(AppStrings.devUrl))
+          ..loadRequest(Uri.parse(AppStrings.initialUrl))
           ..setJavaScriptMode(JavaScriptMode.unrestricted)
           ..addJavaScriptChannel(
             "JavaScriptChannel",
