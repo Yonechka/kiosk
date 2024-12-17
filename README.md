@@ -12,9 +12,9 @@ This is a **KiosK** designed to deliver a seamless, cross-platform experience fo
 ## 🛠️ Technology Stack
 - **Framework**: Flutter
 - **Language**: Dart
-- **State Management**: Provider / Bloc / Riverpod (customize as needed)
-- **Backend**: Firebase / REST API / GraphQL (if applicable)
-- **Database**: SQLite / Hive / SharedPreferences (depending on the app requirements)
+- **State Management**: Bloc
+- **Backend**: -
+- **Database**: -
 
 ## 🔧 Setup and Installation
 1. **Clone the Repository**:
@@ -23,7 +23,7 @@ This is a **KiosK** designed to deliver a seamless, cross-platform experience fo
    ```
 2. **Navigate to the Project Directory**:
    ```bash
-   cd flutter-app
+   cd kiosk
    ```
 3. **Install Dependencies**:
    ```bash
