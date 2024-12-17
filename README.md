@@ -1,7 +1,7 @@
 # Mobile Flutter Application
 
 ## 📱 About the App
-This is a **KiosK** designed to deliver a seamless, cross-platform experience for both Android and iOS users. The app leverages Flutter's powerful UI framework to ensure high performance and a responsive user interface.
+This is a **KiosK** designed to deliver a seamless, platform experience for both Android users.
 
 ## 🚀 Key Features
 - **Cross-platform Support**: Compatible with both Android and iOS devices.
@@ -33,20 +33,6 @@ This is a **KiosK** designed to deliver a seamless, cross-platform experience fo
    ```bash
    flutter run
    ```
-
-## 📂 Folder Structure
-```
-flutter-app/
-├── lib/
-│   ├── models/         # Data models
-│   ├── screens/        # UI screens
-│   ├── widgets/        # Reusable widgets
-│   ├── providers/      # State management (if using Provider)
-│   ├── utils/          # Utility functions
-│   ├── main.dart       # Entry point
-├── assets/             # Images, fonts, etc.
-├── pubspec.yaml        # Project dependencies
-```
 
 ## 📸 Screenshots
 _Add some screenshots of your application here._
